@@ -1,5 +1,13 @@
 {
   "appTitle": "fort_asia_recipe_app",
+  "home": "Home",
+  "login": "Login",
+  "add": "Add",
+  "search": "Search",
+  "errEmptyType": "Please Ensure At Least 1 Type is Selected",
+  "emptyRecipe": "No Recipe Found",
+  "ingredients": "ingredients",
+  "directions": "directions",
   "@appTitle": {
     "description": "The title of the application"
   }

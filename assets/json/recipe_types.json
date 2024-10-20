@@ -1,0 +1,24 @@
+{
+    "recipeTypes": [
+        {
+            "id": 1,
+            "name": "Dessert"
+        },
+        {
+            "id": 2,
+            "name": "Appetizer"
+        },
+        {
+            "id": 3,
+            "name": "Main Course"
+        },
+        {
+            "id": 4,
+            "name": "Salad"
+        },
+        {
+            "id": 5,
+            "name": "Beverage"
+        }
+    ]
+}

@@ -2,19 +2,21 @@ name: fort_asia_recipe_app
 description: "A new Flutter project."
 
 # Prevent accidental publishing to pub.dev.
-publish_to: 'none'
+publish_to: "none"
 
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.4.3 <4.0.0'
+  sdk: ">=3.4.3 <4.0.0"
 
 dependencies:
+  dartz: ^0.10.1
   flutter:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
   flutter_riverpod: ^2.5.3
+  path: ^1.9.0
   riverpod_annotation: ^2.5.3
   sqflite: ^2.3.3+1
 
@@ -37,3 +39,4 @@ flutter:
   assets:
     # Add assets from the images directory to the application.
     - assets/images/
+    - assets/json/

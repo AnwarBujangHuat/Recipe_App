@@ -1,0 +1,177 @@
+{
+    "recipes": [
+        {
+            "id": 1,
+            "name": "Chocolate Cake",
+            "description": "Sweet Like Candy",
+            "thumbnail": "https://sallysbakingaddiction.com/wp-content/uploads/2013/04/triple-chocolate-cake-4.jpg",
+            "recipeTypeId": 1,
+            "ingredients": [
+                {
+                    "name": "Flour",
+                    "quantity": "2 cups"
+                },
+                {
+                    "name": "Sugar",
+                    "quantity": "1.5 cups"
+                },
+                {
+                    "name": "Cocoa Powder",
+                    "quantity": "3/4 cup"
+                },
+                {
+                    "name": "Baking Powder",
+                    "quantity": "1.5 teaspoons"
+                },
+                {
+                    "name": "Eggs",
+                    "quantity": "2"
+                }
+            ],
+            "steps": [
+                "Preheat oven to 350°F (175°C).",
+                "Grease and flour a 9x9 inch pan.",
+                "In a large bowl, stir together the flour, sugar, cocoa, and baking powder.",
+                "Add eggs, mix well until the batter is smooth.",
+                "Pour into the prepared pan.",
+                "Bake for 35 to 40 minutes in the preheated oven, until a toothpick inserted comes out clean."
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Bruschetta",
+            "description": "Delicious Italian Meal",
+            "thumbnail": "https://images.immediate.co.uk/production/volatile/sites/30/2020/08/bruschetta-recipe-1-2448fad.jpg",
+            "recipeTypeId": 2,
+            "ingredients": [
+                {
+                    "name": "Tomatoes",
+                    "quantity": "4 large, diced"
+                },
+                {
+                    "name": "Basil",
+                    "quantity": "1/4 cup chopped"
+                },
+                {
+                    "name": "Olive Oil",
+                    "quantity": "2 tablespoons"
+                },
+                {
+                    "name": "Garlic",
+                    "quantity": "2 cloves, minced"
+                },
+                {
+                    "name": "Baguette",
+                    "quantity": "1 sliced"
+                }
+            ],
+            "steps": [
+                "Preheat the oven to 400°F (200°C).",
+                "In a bowl, combine tomatoes, basil, olive oil, and garlic.",
+                "Arrange baguette slices on a baking sheet and brush with olive oil.",
+                "Toast in the oven until golden, about 5 minutes.",
+                "Top the toasted baguette slices with the tomato mixture.",
+                "Serve immediately."
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Spaghetti Carbonara",
+            "description": "Delicious Italian Dish",
+            "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9dIBD96C9H9OT2FwzsAjssQcDhXTzOmreIw&s",
+            "recipeTypeId": 3,
+            "ingredients": [
+                {
+                    "name": "Spaghetti",
+                    "quantity": "400g"
+                },
+                {
+                    "name": "Eggs",
+                    "quantity": "4"
+                },
+                {
+                    "name": "Parmesan Cheese",
+                    "quantity": "1 cup grated"
+                },
+                {
+                    "name": "Pancetta",
+                    "quantity": "150g, diced"
+                },
+                {
+                    "name": "Garlic",
+                    "quantity": "2 cloves, minced"
+                }
+            ],
+            "steps": [
+                "Cook spaghetti in a large pot of salted water until al dente.",
+                "In a bowl, beat the eggs and mix in the Parmesan cheese.",
+                "In a pan, cook the pancetta until crispy, then add garlic and cook for another minute.",
+                "Drain the spaghetti and add it to the pan with the pancetta. Remove from heat.",
+                "Pour the egg and cheese mixture over the spaghetti, tossing quickly to combine.",
+                "Serve immediately with extra Parmesan."
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Caesar Salad",
+            "description": "Healthy Salad",
+            "thumbnail": "https://lindseyeatsla.com/wp-content/uploads/2021/10/Lindseyeats_Classic_Caesar_Salad-2.jpg",
+            "recipeTypeId": 4,
+            "ingredients": [
+                {
+                    "name": "Romaine Lettuce",
+                    "quantity": "1 head, chopped"
+                },
+                {
+                    "name": "Parmesan Cheese",
+                    "quantity": "1/4 cup, grated"
+                },
+                {
+                    "name": "Croutons",
+                    "quantity": "1 cup"
+                },
+                {
+                    "name": "Caesar Dressing",
+                    "quantity": "1/2 cup"
+                }
+            ],
+            "steps": [
+                "Wash and dry the lettuce, then chop into bite-sized pieces.",
+                "In a large bowl, combine lettuce, croutons, and Parmesan cheese.",
+                "Toss the salad with Caesar dressing until well coated.",
+                "Serve chilled."
+            ]
+        },
+        {
+            "id": 5,
+            "name": "Lemonade",
+            "description": "Refreshing Lemonade Drink",
+            "thumbnail": "https://i0.wp.com/thejoyfilledkitchen.com/wp-content/uploads/2021/04/Lemonade-2-2.jpg?resize=740%2C792&ssl=1",
+            "recipeTypeId": 5,
+            "ingredients": [
+                {
+                    "name": "Lemons",
+                    "quantity": "4, juiced"
+                },
+                {
+                    "name": "Sugar",
+                    "quantity": "1 cup"
+                },
+                {
+                    "name": "Water",
+                    "quantity": "4 cups"
+                },
+                {
+                    "name": "Ice",
+                    "quantity": "As needed"
+                }
+            ],
+            "steps": [
+                "In a pitcher, combine lemon juice, sugar, and 1 cup of water. Stir until the sugar dissolves.",
+                "Add the remaining water and mix well.",
+                "Chill in the refrigerator for at least 1 hour.",
+                "Serve over ice."
+            ]
+        }
+    ]
+}
