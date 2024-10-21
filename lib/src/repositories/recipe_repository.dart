@@ -80,6 +80,7 @@ class RecipeRepository {
         },
         conflictAlgorithm: ConflictAlgorithm.replace,
       );
+      // ignore: empty_catches
     } catch (e) {}
   }
 
@@ -89,10 +90,21 @@ class RecipeRepository {
     try {
       await db.update(
         'recipes',
-        recipe.toJson(),
+        {
+          'id': recipe.id,
+          'name': recipe.name,
+          'description': recipe.description,
+          'recipeTypeId': recipe.recipeTypeId,
+          'thumbnail': recipe.thumbnail,
+          'ingredients': jsonEncode(
+              recipe.ingredients), // Convert List<Map> to JSON String
+          'steps':
+              jsonEncode(recipe.steps), // Convert List<String> to JSON String
+        },
         where: 'id = ?',
         whereArgs: [recipe.id],
       );
+      // ignore: empty_catches
     } catch (e) {}
   }
 
@@ -105,6 +117,7 @@ class RecipeRepository {
         where: 'id = ?',
         whereArgs: [id],
       );
+      // ignore: empty_catches
     } catch (e) {}
   }
 
@@ -116,21 +129,19 @@ class RecipeRepository {
     return List.generate(maps.length, (i) {
       try {
         return RecipeModel.fromJson(maps[i]);
+        // ignore: empty_catches
       } catch (e) {}
       return RecipeModel.fromJson(maps[i]);
     });
   }
 
-  // Get all recipes either from DB or JSON (with fallback)
   Future<Either<Exception, List<RecipeModel>>> getAllRecipes() async {
-    // Check the database first
     List<RecipeModel> recipesFromDB = await getRecipesFromDB();
 
     if (recipesFromDB.isNotEmpty) {
       return Right(recipesFromDB);
     }
 
-    // If no data in DB, load from JSON and insert into DB
     try {
       Map<String, dynamic> jsonData =
           await loadJsonFromAssets('assets/json/recipe.json');
@@ -147,7 +158,6 @@ class RecipeRepository {
     }
   }
 
-  // Get specific recipe details from database or JSON
   Future<Either<Exception, RecipeModel>> getRecipeDetails({
     required int recipeID,
   }) async {
@@ -158,7 +168,6 @@ class RecipeRepository {
       }
     }
 
-    // If not found in DB, fallback to JSON
     try {
       Map<String, dynamic> jsonData =
           await loadJsonFromAssets('assets/json/recipe.json');

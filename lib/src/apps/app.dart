@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:fort_asia_recipe_app/src/apps/constants.dart';
+import 'package:fort_asia_recipe_app/src/features/add_new_recipe/views/add_new_recipe_view.dart';
 import 'package:fort_asia_recipe_app/src/features/home/views/home_view.dart';
 import 'package:fort_asia_recipe_app/src/features/recipe_details/views/recipe_details_view.dart';
+import 'package:fort_asia_recipe_app/src/model/recipe_model.dart';
 
 import '../features/settings/settings_controller.dart';
 import '../features/settings/settings_view.dart';
@@ -149,6 +151,10 @@ class MyApp extends StatelessWidget {
                   case RouteName.detailsPage:
                     return RecipeDetailsView(
                       recipeId: routeSettings.arguments as int,
+                    );
+                  case RouteName.addNewRecipePage:
+                    return AddNewRecipeView(
+                      recipeModel: routeSettings.arguments as RecipeModel?,
                     );
 
                   /// Default first

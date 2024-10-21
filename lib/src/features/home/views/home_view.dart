@@ -28,7 +28,9 @@ class _HomeViewState extends ConsumerState<HomeView> {
 
       /// Floating Action Button
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushNamed(context, RouteName.addNewRecipePage);
+        },
         child: const Icon(Icons.add),
       ),
 

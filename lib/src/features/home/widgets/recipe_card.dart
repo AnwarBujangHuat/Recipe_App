@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:fort_asia_recipe_app/src/apps/constants.dart';
 import 'package:fort_asia_recipe_app/src/model/recipe_model.dart';
@@ -8,9 +10,22 @@ class RecipeCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ImageProvider getImageProvider(String imageUrl) {
+      if (imageUrl.isNotEmpty && Uri.tryParse(imageUrl)?.hasScheme == true) {
+        return NetworkImage(imageUrl);
+      } else {
+        final localImage = File(imageUrl);
+        if (localImage.existsSync()) {
+          return FileImage(localImage);
+        } else {
+          return const AssetImage('assets/images/placeholder.png');
+        }
+      }
+    }
+
     return GestureDetector(
-      onTap: () =>
-          Navigator.pushNamed(context, RouteName.detailsPage,arguments:  recipeModel.id),
+      onTap: () => Navigator.pushNamed(context, RouteName.detailsPage,
+          arguments: recipeModel.id),
       child: Card(
           semanticContainer: true,
           clipBehavior: Clip.antiAliasWithSaveLayer,
@@ -22,11 +37,10 @@ class RecipeCard extends StatelessWidget {
           child: Stack(
             children: [
               Positioned.fill(
-                child: Image.network(
-                  recipeModel.thumbnail,
-                  fit: BoxFit.cover,
-                ),
-              ),
+                  child: Image(
+                image: getImageProvider(recipeModel.thumbnail),
+                fit: BoxFit.cover,
+              )),
               Align(
                   alignment: Alignment.bottomCenter,
                   child: Container(
