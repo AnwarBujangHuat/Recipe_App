@@ -26,11 +26,15 @@ class RecipeModel {
       description: json['description'],
       thumbnail: json['thumbnail'],
       recipeTypeId: json['recipeTypeId'],
-      ingredients: (jsonDecode(json['ingredients']) as List)
-          .map((i) => IngredientModel.fromJson(i))
-          .toList(),
-      // Decode the JSON string into List<String>
-      steps: List<String>.from(jsonDecode(json['steps']) as List),
+      ingredients: (json['ingredients'] is String)
+          ? List<IngredientModel>.from(jsonDecode(json['ingredients'])
+              .map((i) => IngredientModel.fromJson(i)))
+          : (json['ingredients'] as List)
+              .map((i) => IngredientModel.fromJson(i))
+              .toList(),
+      steps: (json['steps'] is String)
+          ? List<String>.from(jsonDecode(json['steps']))
+          : List<String>.from(json['steps'] as List),
     );
   }
 
